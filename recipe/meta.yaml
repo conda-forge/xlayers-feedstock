@@ -1,4 +1,4 @@
-{% set version = "0.2" %}
+{% set version = "0.2.1" %}
 
 package:
   name: xlayers
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xlayers/xlayers-{{ version }}.tar.gz
-  sha256: 86badaa212b43e5b436b0da43186a723eeb276e2e9a3f7c677c5fc63c593178d
+  sha256: 7f2581fe681ddaa59cc56b933f02e134ccf04bcd1d339243986f8055e4cb548c
 
 build:
   number: 0
