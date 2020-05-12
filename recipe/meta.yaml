@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: xlayers
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xlayers/xlayers-{{ version }}.tar.gz
-  sha256: 7f2581fe681ddaa59cc56b933f02e134ccf04bcd1d339243986f8055e4cb548c
+  sha256: 93f6954ba589685bc39fcee490ca86810471b072ce06082fe53bd35b2b2478ca
 
 build:
   number: 0
-  skip: True  # [py<36 or win]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  skip: true  # [py<36 or win]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Fast convective parameters for numpy, dask, and xarray"
+  summary: Fast convective parameters for numpy, dask, and xarray
 
 extra:
   recipe-maintainers:
