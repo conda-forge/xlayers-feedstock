@@ -9,8 +9,7 @@ source:
   sha256: 93f6954ba589685bc39fcee490ca86810471b072ce06082fe53bd35b2b2478ca
 
 build:
-  number: 1
-  skip: true  # [py<36 or win]
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,7 +19,7 @@ requirements:
   host:
     - python
     - pip
-    - numpy 1.16
+    - numpy
   run:
     - python
     - xarray >=0.13.0
