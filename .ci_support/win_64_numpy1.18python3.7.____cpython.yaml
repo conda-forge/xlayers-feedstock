@@ -1,13 +1,11 @@
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
-docker_image:
-- condaforge/linux-anvil-comp7
-fortran_compiler:
-- gfortran
-fortran_compiler_version:
-- '9'
+m2w64_fortran_compiler:
+- m2w64-toolchain
+numpy:
+- '1.18'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -15,4 +13,7 @@ pin_run_as_build:
 python:
 - 3.7.* *_cpython
 target_platform:
-- linux-64
+- win-64
+zip_keys:
+- - python
+  - numpy
