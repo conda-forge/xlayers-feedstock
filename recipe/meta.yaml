@@ -9,7 +9,7 @@ source:
   sha256: 93f6954ba589685bc39fcee490ca86810471b072ce06082fe53bd35b2b2478ca
 
 build:
-  number: 5
+  number: 6
   skip: True  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -17,6 +17,7 @@ requirements:
   build:
     - {{ compiler('fortran') }}  # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ stdlib("c") }}    # [win]
   host:
     - python
     - pip
@@ -25,7 +26,6 @@ requirements:
     - python
     - xarray >=0.13.0
     - dask-core
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
